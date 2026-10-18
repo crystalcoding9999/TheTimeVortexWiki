@@ -1,18 +1,22 @@
 [project]
-site_url = "https://www.example.com/"
-site_name = "Documentation"
+site_url = "https://thetimevortexwiki.pages.dev/"
+site_name = "The Time Vortex Wiki"
 # site_description = "Your project description"
-# site_author = "Your name"
+site_author = "crystalcoding"
 
-# copyright = "Copyright &copy; 2026 Your name"
+copyright = """
+Except where otherwise noted, content on this site is licensed under 
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+Creative Commons Attribution 4.0 International License (CC BY 4.0)
+</a>.
+"""
 
-# repo_url = "https://github.com/user/repo"
-# repo_name = "user/repo"
+repo_url = "https://github.com/crystalcoding9999/TheTimeVortexWiki"
+repo_name = "TheTimeVortexWiki"
 # edit_uri = "edit/main/docs/"
 
 nav = [
-  { "Get started" = "index.md" },
-  { "Markdown in 5min" = "markdown.md" },
+  { "Welcome to the wiki" = "index.md" }
 ]
 
 # extra_css = ["stylesheets/extra.css"]
@@ -51,6 +55,10 @@ features = [
   # "toc.follow",
   # "toc.integrate",
 ]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/AWFXw4UBjd"
 
 # logo = "assets/logo.png"
 
