@@ -1,0 +1,21 @@
+# --- Build & Output Directories ---
+site/
+dist/
+build/
+
+# --- Virtual Environments & Tooling Cache ---
+.venv/
+.cache/
+.zensical/
+.zen/
+
+# --- Python & Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- OS & Editor Specific ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
