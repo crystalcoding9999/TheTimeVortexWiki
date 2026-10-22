@@ -1,0 +1,119 @@
+/* Minecraft Recipe Container */
+.mc-recipe {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #c6c6c6;
+  border: 4px solid;
+  border-color: #fff #555 #555 #fff;
+  padding: 12px;
+  box-shadow: 2px 2px 0px #000;
+  margin: 1em 0;
+  font-family: monospace;
+  user-select: none;
+}
+
+/* 3x3 Grid */
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 2px;
+  background-color: #8b8b8b;
+  padding: 2px;
+  border: 2px solid;
+  border-color: #373737 #fff #fff #373737;
+}
+
+/* Individual Slot */
+.mc-slot {
+  width: 36px;
+  height: 36px;
+  background-color: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #fff #fff #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Slot Hover Effect */
+.mc-slot:not(.empty):hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Crafting Arrow */
+.mc-arrow {
+  width: 32px;
+  height: 26px;
+  background-color: #555;
+  clip-path: polygon(0% 35%, 60% 35%, 60% 10%, 100% 50%, 60% 90%, 60% 65%, 0% 65%);
+}
+
+/* Output Slot Container */
+.mc-output {
+  width: 52px;
+  height: 52px;
+  background-color: #8b8b8b;
+  border: 3px solid;
+  border-color: #373737 #fff #fff #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Item Images */
+.mc-slot img, .mc-output img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated; /* Keeps pixel art crisp */
+}
+
+.mc-output img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Tooltip on Hover */
+.mc-slot[data-title]:hover::after,
+.mc-output[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #100010;
+  color: #fff;
+  border: 2px solid #2b005c;
+  padding: 3px 7px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+  box-shadow: 0 0 5px #000;
+  pointer-events: none;
+}
+
+/* Visual hint for tag slots */
+.mc-slot.tag-slot::after-badge {
+  content: "";
+}
+
+.mc-slot.tag-slot {
+  position: relative;
+}
+
+/* Tiny indicator dot/badge in the corner of tag slots */
+.mc-slot.tag-slot::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 4px;
+  height: 4px;
+  background-color: #55ff55;
+  box-shadow: 0 0 2px #000;
+  z-index: 5;
+}
