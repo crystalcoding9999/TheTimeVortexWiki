@@ -26,6 +26,7 @@ nav = [
 extra_css = ["stylesheets/mc-recipes.css"]
 extra_javascript = [
   "javascript/item-tags.js",
+  "javascript/mc-item.js",
   "javascript/mc-recipe.js",
   "javascript/mc-machine-recipe.js"
 ]

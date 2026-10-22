@@ -6,6 +6,50 @@
     font-style: normal;
 }
 
+/* Make <mc-item> itself act as the 36x36px grid slot */
+mc-item {
+  width: 36px;
+  height: 36px;
+  background-color: #8b8b8b;
+  border: 2px solid;
+  border-color: #373737 #fff #fff #373737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Hover effect for filled slots */
+mc-item:not([item=""]):hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Item images inside <mc-item> */
+mc-item img {
+  width: 32px;
+  height: 32px;
+  image-rendering: pixelated;
+}
+
+/* Tooltip on Hover for <mc-item> */
+mc-item[data-title]:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #100010;
+  color: #fff;
+  border: 2px solid #2b005c;
+  padding: 3px 7px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+  box-shadow: 0 0 5px #000;
+  pointer-events: none;
+}
+
 /* Main Recipe Box Container */
 .mc-recipe {
   display: inline-flex;
@@ -25,6 +69,18 @@
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+/* 3x3 Crafting Grid */
+.mc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 2px;
+  background-color: #8b8b8b;
+  padding: 2px;
+  border: 2px solid;
+  border-color: #373737 #fff #fff #373737;
 }
 
 /* 2x2 Input Grid */
