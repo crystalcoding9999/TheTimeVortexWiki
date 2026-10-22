@@ -1,17 +1,3 @@
-// Define your custom tags and vanilla tags here!
-const MINECRAFT_TAGS = {
-  "minecraft:planks": [
-    "acacia_planks",
-    "birch_planks",
-    "cherry_planks",
-    "dark_oak_planks",
-    "jungle_planks",
-    "mangrove_planks",
-    "oak_planks",
-    "spruce_planks",
-  ]
-};
-
 class McRecipe extends HTMLElement {
   connectedCallback() {
     const gridAttr = this.getAttribute('grid') || '';
@@ -26,7 +12,7 @@ class McRecipe extends HTMLElement {
       if (!rawVal) return [];
       if (rawVal.startsWith('#')) {
         const tagName = rawVal.substring(1);
-        return MINECRAFT_TAGS[tagName] || [tagName]; // Fallback if tag is missing
+        return window.MINECRAFT_TAGS[tagName] || [tagName]; // Fallback if tag is missing
       }
       return [rawVal];
     };
@@ -49,7 +35,7 @@ class McRecipe extends HTMLElement {
         const slotId = 'mc-slot-' + Math.random().toString(36).substring(2, 9);
         
         gridHTML += `
-          <div class="mc-slot tag-slot" id="${slotId}" data-title="${formatName(firstItem)} (Tag)">
+          <div class="mc-slot tag-slot" id="${slotId}" data-title="${formatName(firstItem)}">
             <img src="${basePath}${firstItem}.png" alt="${firstItem}">
           </div>
         `;

@@ -18,13 +18,17 @@ repo_name = "TheTimeVortexWiki"
 nav = [
   { "Welcome to the wiki" = "index.md" },
   { "Getting Started" = [
-    {"" = "getting_started/index.md"}
+    {"Getting Started" = "getting_started/index.md"}
   ]
   }
 ]
 
 extra_css = ["stylesheets/mc-recipes.css"]
-extra_javascript = ["javascript/mc-recipe.js"]
+extra_javascript = [
+  "javascript/item-tags.js",
+  "javascript/mc-recipe.js",
+  "javascript/mc-machine-recipe.js"
+]
 
 [project.theme]
 # variant = "classic"
