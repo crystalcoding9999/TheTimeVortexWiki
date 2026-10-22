@@ -17,8 +17,8 @@ repo_name = "TheTimeVortexWiki"
 
 nav = [
   { "Welcome to the wiki" = "index.md" },
-  { "Getting Started" = [
-    {"Getting Started" = "getting_started/index.md"}
+  { "Materials" = [
+    {"Materials" = "materials/index.md"}
   ]
   }
 ]
