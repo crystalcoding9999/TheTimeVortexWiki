@@ -16,7 +16,11 @@ repo_name = "TheTimeVortexWiki"
 # edit_uri = "edit/main/docs/"
 
 nav = [
-  { "Welcome to the wiki" = "index.md" }
+  { "Welcome to the wiki" = "index.md" },
+  { "Getting Started" = [
+    {"" = "getting_started/index.md"}
+  ]
+  }
 ]
 
 # extra_css = ["stylesheets/extra.css"]
